@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "856091504811",
+    "project_id": "autocustocalculocombustivel",
+    "storage_bucket": "autocustocalculocombustivel.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856091504811:android:669aafa13a96b2ba2687ee",
+        "android_client_info": {
+          "package_name": "com.kingcreationslabs.autocusto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX2JvYz1jHwhcxH6Q1gzuP8RHNG2moTGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
