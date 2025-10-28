@@ -1,4 +1,4 @@
-package com.kingcreationslabs.autocusto.ui.theme
+package com.kingcreationslabs.autocusto.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
