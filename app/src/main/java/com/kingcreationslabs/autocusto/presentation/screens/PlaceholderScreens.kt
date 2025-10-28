@@ -9,10 +9,7 @@ import androidx.compose.ui.Modifier
 
 // Usaremos estas telas temporariamente até implementarmos as telas reais nas próximas Sprints.
 
-@Composable
-fun SplashScreen() {
-    DummyScreen(text = "Splash Screen")
-}
+
 
 @Composable
 fun OnboardingScreen() {

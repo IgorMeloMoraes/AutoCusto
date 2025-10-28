@@ -7,7 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.kingcreationslabs.autocusto.presentation.screens.LoginScreen
 import com.kingcreationslabs.autocusto.presentation.screens.MainAppScreen
 import com.kingcreationslabs.autocusto.presentation.screens.OnboardingScreen
-import com.kingcreationslabs.autocusto.presentation.screens.SplashScreen
+import com.kingcreationslabs.autocusto.presentation.screens.splash.SplashScreen
 
 @Composable
 fun AppNavigation() {
@@ -23,8 +23,8 @@ fun AppNavigation() {
         // Define cada tela e a qual rota ela pertence
 
         composable(route = Routes.Splash.route) {
-            SplashScreen()
-            // TODO Sprint 1: Adicionar lógica para verificar se o usuário já está logado ou se já viu o onboarding, e então navegar para Login ou MainApp.
+            // Agora estamos a chamar a SplashScreen real e a passar o navController
+            SplashScreen(navController = navController)
         }
 
         composable(route = Routes.Onboarding.route) {

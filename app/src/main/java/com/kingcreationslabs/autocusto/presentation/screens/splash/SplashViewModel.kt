@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlinx.coroutines.delay
 
 /**
  * ViewModel para a [SplashScreen].
@@ -39,13 +40,28 @@ class SplashViewModel @Inject constructor(
     }
 
     /**
-     * Verifica o estado de onboarding do utilizador.
-     * Lança uma coroutine para ler o valor do DataStore.
+     * Verifica o estado de onboarding, garantindo um tempo mínimo
+     * de exibição da splash screen para fins de branding.
      */
     private fun checkOnboardingStatus() {
         viewModelScope.launch {
+            // Define o tempo mínimo de exibição (ex: 2500ms = 3.5 segundos)
+            val minDisplayTime = 3500L
+            val startTime = System.currentTimeMillis()
+
             // Usamos .first() porque na Splash Screen só precisamos do primeiro e único valor atual. Não precisamos de observar mudanças.
+            // Faz o trabalho real (ler o DataStore)
             val preferences = userPreferencesRepository.userPreferences.first()
+
+            // Calcula quanto tempo o trabalho demorou
+            val jobDuration = System.currentTimeMillis() - startTime
+
+            // Se o trabalho foi MAIS RÁPIDO que o tempo mínimo...
+            if (jobDuration < minDisplayTime) {
+                // ...espera o tempo restante.
+                val remainingTime = minDisplayTime - jobDuration
+                delay(remainingTime)
+            }
 
             // Atualiza o estado da UI com os dados carregados
             _uiState.update { currentState ->
