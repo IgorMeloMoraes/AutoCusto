@@ -12,11 +12,6 @@ import androidx.compose.ui.Modifier
 
 
 @Composable
-fun OnboardingScreen() {
-    DummyScreen(text = "Onboarding/Carousel Screen")
-}
-
-@Composable
 fun LoginScreen() {
     DummyScreen(text = "Login/Register Screen")
 }

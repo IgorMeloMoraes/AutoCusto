@@ -6,7 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.kingcreationslabs.autocusto.presentation.screens.LoginScreen
 import com.kingcreationslabs.autocusto.presentation.screens.MainAppScreen
-import com.kingcreationslabs.autocusto.presentation.screens.OnboardingScreen
+import com.kingcreationslabs.autocusto.presentation.screens.onboarding.OnboardingScreen
 import com.kingcreationslabs.autocusto.presentation.screens.splash.SplashScreen
 
 @Composable
@@ -28,7 +28,8 @@ fun AppNavigation() {
         }
 
         composable(route = Routes.Onboarding.route) {
-            OnboardingScreen()
+            // Chama a tela real, passando o navController
+            OnboardingScreen(navController = navController)
         }
 
         composable(route = Routes.Login.route) {
