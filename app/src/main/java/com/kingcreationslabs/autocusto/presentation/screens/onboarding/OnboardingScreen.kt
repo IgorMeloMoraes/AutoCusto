@@ -1,5 +1,6 @@
 package com.kingcreationslabs.autocusto.presentation.screens.onboarding
 
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -43,7 +44,8 @@ import kotlinx.coroutines.launch
  */
 @Composable
 fun OnboardingScreen(
-    navController: NavController
+    navController: NavController,
+    viewModel: OnboardingViewModel = hiltViewModel() // <-- Injeta o ViewModel
 ) {
     // TODO: Substitua pelos seus próprios recursos
     val pages = listOf(
@@ -99,9 +101,8 @@ fun OnboardingScreen(
                 }
             },
             onDoneClicked = {
-                // TO-DO (Tarefa 1.6): Chamar o ViewModel aqui para salvar
-                // o estado de "onboarding concluído".
-                // ex: viewModel.setOnboardingCompleted()
+                //  A lógica de negocio agora é chamada aqui
+                viewModel.setOnboardingCompleted()
 
                 // Navega para o Login e limpa a pilha de navegação
                 navController.navigate(Routes.Login.route) {
