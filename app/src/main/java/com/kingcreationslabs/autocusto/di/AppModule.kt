@@ -1,24 +1,36 @@
 package com.kingcreationslabs.autocusto.di
 
+import com.kingcreationslabs.autocusto.data.repository.UserPreferencesRepositoryImpl
+import com.kingcreationslabs.autocusto.domain.repository.UserPreferencesRepository
+import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 /**
  * Módulo Hilt que provê dependências em escopo de
  * Singleton (nível de Application).
+ *
+ * Nota: Convertido para 'abstract class' para suportar o @Binds.
  */
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+abstract class AppModule {
 
-    // Deixaremos vazio por enquanto.
-    // Nas próximas Sprints, adicionaremos aqui os provedores para o Room Database, DataStore, e os Repositórios.
-    // Exemplo futuro:
-    // @Singleton
-    // @Provides
-    // fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase {
-    //     return Room.databaseBuilder(...).build()
-    // }
+    /**
+     * Provê a implementação do [UserPreferencesRepository].
+     *
+     * @Binds é usado para dizer ao Hilt qual implementação usar
+     * quando uma interface for solicitada.
+     */
+    @Binds
+    @Singleton
+    abstract fun bindUserPreferencesRepository(
+        userPreferencesRepositoryImpl: UserPreferencesRepositoryImpl
+    ): UserPreferencesRepository
 
+    // Deixaremos o resto vazio por enquanto.
+    // Nas próximas Sprints, adicionaremos aqui os provedores
+    // para o Room Database, DataStore, etc.
 }
