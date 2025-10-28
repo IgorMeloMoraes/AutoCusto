@@ -24,6 +24,7 @@ junitVersion = "1.1.5"
 androidxTestJunit = "1.1.5"
 espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.1"
+kotlinxCoroutinesTest = "1.8.1"
 
 
 
@@ -69,6 +70,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestJunit" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
 
 # --- DEBUG ---
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
