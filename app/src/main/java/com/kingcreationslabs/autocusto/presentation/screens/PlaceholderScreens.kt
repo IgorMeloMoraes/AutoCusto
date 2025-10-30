@@ -11,10 +11,7 @@ import androidx.compose.ui.Modifier
 
 
 
-@Composable
-fun LoginScreen() {
-    DummyScreen(text = "Login/Register Screen")
-}
+
 
 @Composable
 fun MainAppScreen() {
