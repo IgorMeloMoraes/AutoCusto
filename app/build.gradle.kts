@@ -91,6 +91,7 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.navigation.testing)
     testImplementation(libs.turbine)
+    testImplementation(libs.mockk)
 
     // --- DEBUG ---
     debugImplementation(libs.androidx.compose.ui.tooling)
