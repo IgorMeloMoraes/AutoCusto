@@ -7,6 +7,8 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
+import com.kingcreationslabs.autocusto.data.repository.AuthRepositoryImpl
+import com.kingcreationslabs.autocusto.domain.repository.AuthRepository
 
 /**
  * Módulo Hilt que provê dependências em escopo de
@@ -29,6 +31,18 @@ abstract class AppModule {
     abstract fun bindUserPreferencesRepository(
         userPreferencesRepositoryImpl: UserPreferencesRepositoryImpl
     ): UserPreferencesRepository
+
+    /**
+     * Provê a implementação do [AuthRepository].
+     *
+     * @Binds é usado para dizer ao Hilt qual implementação usar
+     * quando uma interface for solicitada.
+     */
+    @Binds
+    @Singleton
+    abstract fun bindAuthRepository(
+        authRepositoryImpl: AuthRepositoryImpl
+    ): AuthRepository
 
     // Deixaremos o resto vazio por enquanto.
     // Nas próximas Sprints, adicionaremos aqui os provedores

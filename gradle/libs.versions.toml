@@ -27,6 +27,11 @@ espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.1"
 kotlinxCoroutinesTest = "1.8.1"
 
+# --- GOOGLE --
+playServicesAuth = "21.2.0"
+kotlinxCoroutinesPlayServices = "1.8.1"
+kotlinxCoroutines = "1.8.1"
+
 
 
 [libraries]
@@ -36,6 +41,9 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle" }
+
+# Coroutines (Core + Android)
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 
 # --- ACTIVITY & NAVIGATION (COMPOSE) ---
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -52,8 +60,8 @@ androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "l
 
 # --- FIREBASE (BOM) ---
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
-firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
-firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore-ktx" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
 
 # --- HILT (DI) ---
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
@@ -81,6 +89,12 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 
 # --- FACEBOOK ---
 facebook-login = { group = "com.facebook.android", name = "facebook-login", version.ref = "facebookLogin" }
+
+# Google Sign-In Client
+google-play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
+
+# Coroutines await() helper for Firebase/Play Services
+kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "kotlinxCoroutinesPlayServices" }
 
 # --- Nossos Plugins ---
 [plugins]

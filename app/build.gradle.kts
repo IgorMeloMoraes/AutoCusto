@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.kotlinx.coroutines.android)
 
     // --- JETPACK COMPOSE (BOM) ---
     implementation(platform(libs.androidx.compose.bom))
@@ -90,11 +91,17 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.navigation.testing)
 
-// --- DEBUG ---
+    // --- DEBUG ---
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     // Facebook SDK
     implementation(libs.facebook.login)
+
+    // Google Sign-In (necessário para obter o ID Token no cliente)
+    implementation(libs.google.play.services.auth)
+
+    // Helper .await() para chamadas do Firebase
+    implementation(libs.kotlinx.coroutines.play.services)
 
 }
