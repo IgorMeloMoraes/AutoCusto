@@ -8,5 +8,6 @@ sealed class Routes(val route: String) {
     object Splash : Routes("splash_screen")
     object Onboarding : Routes("onboarding_screen")
     object Login : Routes("login_screen")
+    object Register : Routes("register_screen")
     object MainApp : Routes("main_app_graph") // Esta será a rota para o app "logado"
 }

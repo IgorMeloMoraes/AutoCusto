@@ -8,6 +8,7 @@ import com.kingcreationslabs.autocusto.presentation.screens.login.LoginScreen
 import com.kingcreationslabs.autocusto.presentation.screens.MainAppScreen
 import com.kingcreationslabs.autocusto.presentation.screens.onboarding.OnboardingScreen
 import com.kingcreationslabs.autocusto.presentation.screens.splash.SplashScreen
+import com.kingcreationslabs.autocusto.presentation.screens.register.RegisterScreen
 
 @Composable
 fun AppNavigation() {
@@ -35,6 +36,10 @@ fun AppNavigation() {
         composable(route = Routes.Login.route) {
             // Chamando a tela real e passando o NavController
             LoginScreen(navController = navController)
+        }
+
+        composable(route = Routes.Register.route) {
+            RegisterScreen(navController = navController)
         }
 
         composable(route = Routes.MainApp.route) {
