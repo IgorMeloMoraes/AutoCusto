@@ -90,6 +90,7 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.navigation.testing)
+    testImplementation(libs.turbine)
 
     // --- DEBUG ---
     debugImplementation(libs.androidx.compose.ui.tooling)

@@ -26,6 +26,7 @@ androidxTestJunit = "1.1.5"
 espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.1"
 kotlinxCoroutinesTest = "1.8.1"
+turbine = "1.1.0"
 
 # --- GOOGLE --
 playServicesAuth = "21.2.0"
@@ -82,6 +83,8 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
 androidx-navigation-testing = { group = "androidx.navigation", name = "navigation-testing", version.ref = "navigationCompose" }
+# Teste de Flow/Channel (Turbine)
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
 
 # --- DEBUG ---
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
